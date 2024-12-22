@@ -1,0 +1,79 @@
+.root {
+    -fx-font-family: "Verdana";
+}
+
+.label {
+    -fx-font-family: "Verdana";
+}
+
+.text-area {
+    -fx-font-family: "Verdana";
+}
+
+.button {
+    -fx-font-family: "Verdana";
+}
+/* Background color */
+.root {
+    -fx-background-color: #1e1e1e;
+}
+
+/* Text color */
+.label, .text-area {
+    -fx-text-fill: #d9d9d9;
+}
+
+/* Button styles */
+.button {
+    -fx-background-color: #3c3c3c;
+    -fx-text-fill: #d9d9d9;
+}
+
+.button:hover {
+    -fx-background-color: #4d4d4d;
+}
+
+/* Text area styles */
+.text-area {
+    -fx-control-inner-background: #2b2b2b;
+}
+
+/* Scroll pane styles */
+.scroll-pane {
+    -fx-background-color: #1e1e1e;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: #1e1e1e;
+}
+
+/* Split pane styles */
+.split-pane {
+    -fx-background-color: #1e1e1e;
+}
+
+.split-pane .split-pane-divider {
+    -fx-background-color: #3c3c3c;
+}
+
+/* Menu bar styles */
+.menu-bar {
+    -fx-background-color: #1e1e1e;
+}
+
+.menu-bar .label {
+    -fx-text-fill: #d9d9d9;
+}
+
+.menu-item {
+    -fx-background-color: #1e1e1e;
+}
+
+.menu-item:focused {
+    -fx-background-color: #3c3c3c;
+}
+
+/* Error message label styles */
+#errorMessageLabel {
+    -fx-text-fill: #ff5555;
+}

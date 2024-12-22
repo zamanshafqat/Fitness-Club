@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="600.0" prefWidth="900.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rw.app.finalgui.HelloController">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#loadFile" text="Open…" />
+            <MenuItem mnemonicParsing="false" onAction="#saveFile" text="Save As…" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem fx:id="about" mnemonicParsing="false" onAction="#aboutAction" text="About MyApp" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <SplitPane dividerPositions="0.2505567928730512, 0.7505567928730512" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <items>
+        <AnchorPane>
+          <children>
+            <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="Menu" textAlignment="CENTER" wrapText="false">
+              <font>
+                <Font size="18.0" fx:id="x1" />
+              </font>
+              <textFill>
+                <Color red="0.624" green="0.624" blue="0.624" fx:id="x2" />
+              </textFill>
+            </Label>
+                  <Button fx:id="addMember" layoutX="47.0" layoutY="49.0" mnemonicParsing="false" onAction="#actionAddMember" prefHeight="26.0" prefWidth="143.0" text="Add Member" />
+                  <Button layoutX="47.0" layoutY="75.0" mnemonicParsing="false" onAction="#allMembers" prefHeight="26.0" prefWidth="143.0" text="Print All Members" />
+                  <Button layoutX="47.0" layoutY="101.0" mnemonicParsing="false" onAction="#avgCalories" prefHeight="26.0" prefWidth="143.0" text="Average Calories" />
+                  <Button fx:id="myFat" layoutX="47.0" layoutY="127.0" mnemonicParsing="false" onAction="#fatAction" prefHeight="26.0" prefWidth="143.0" text="15% BodyFat" />
+                  <Button fx:id="mySenior" layoutX="47.0" layoutY="153.0" mnemonicParsing="false" onAction="#seniorAction" prefHeight="26.0" prefWidth="143.0" text="Senior Members" />
+                  <Button fx:id="myCalories" layoutX="47.0" layoutY="179.0" mnemonicParsing="false" onAction="#caloriesAction" prefHeight="26.0" prefWidth="143.0" text="Calories &lt; 1500" />
+                  <Button layoutX="47.0" layoutY="205.0" mnemonicParsing="false" onAction="#weightAction" prefHeight="26.0" prefWidth="143.0" text="Weight &lt; 80Kg" />
+                  <Button fx:id="allMember" layoutX="47.0" layoutY="231.0" mnemonicParsing="false" onAction="#actionAllMember" prefHeight="26.0" prefWidth="143.0" text="All Info Member" />
+                  <Button layoutX="47.0" layoutY="257.0" mnemonicParsing="false" onAction="#quitAction" prefHeight="26.0" prefWidth="143.0" text="Exit Program" />
+          </children>
+        </AnchorPane>
+        <ScrollPane prefHeight="-1.0" prefWidth="-1.0">
+          <content>
+            <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="545.0" prefWidth="430.0">
+              <children>
+                <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="View" textAlignment="CENTER" textFill="$x2" wrapText="false" />
+                        <Button layoutX="26.0" layoutY="49.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="77.0" text="Output" />
+                        <Button fx:id="input" layoutX="26.0" layoutY="296.0" mnemonicParsing="false" onAction="#inputAction" prefHeight="26.0" prefWidth="77.0" text="Input" />
+                        <TextArea fx:id="outputText" editable="false" layoutX="16.0" layoutY="85.0" prefHeight="200.0" prefWidth="398.0" />
+                        <TextArea fx:id="inputText" layoutX="16.0" layoutY="332.0" prefHeight="14.0" prefWidth="406.0" />
+              </children>
+            </AnchorPane>
+          </content>
+        </ScrollPane>
+        <AnchorPane>
+          <children>
+            <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="Details" textAlignment="CENTER" textFill="$x2" wrapText="false" />
+
+            <Label fx:id="errorMessageLabel" layoutX="14.0" layoutY="40.0" maxWidth="-1.0" text="Invalid input prompted" textFill="red" visible="false" wrapText="true" />
+
+            <Label fx:id="dateTimeLabel" layoutX="14.0" layoutY="65.0" maxWidth="-1.0" text="2023-12-27 13:05:20">
+              <font>
+                <Font size="11.0" />
+              </font>
+              <textFill>
+                <Color red="0.625" green="0.625" blue="0.625" />
+              </textFill>
+            </Label>
+            <Pane prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS" />
+            <TextArea layoutX="10.0" layoutY="90.0" prefHeight="200.0" prefWidth="200.0" />
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+    <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
+      <children>
+        <Label maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="Left status" HBox.hgrow="ALWAYS">
+          <font>
+            <Font size="11.0" fx:id="x5" />
+          </font>
+          <textFill>
+            <Color red="0.625" green="0.625" blue="0.625" fx:id="x6" />
+          </textFill>
+        </Label>
+        <Pane prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS" />
+        <Label font="$x5" maxWidth="-1.0" text="Right status" textFill="$x6" HBox.hgrow="NEVER" />
+      </children>
+      <padding>
+        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+      </padding>
+    </HBox>
+  </children>
+    </VBox>
